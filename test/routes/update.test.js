@@ -13,6 +13,14 @@ before(() => {
       body: '구름은 나의 것'
     }
   })
+
+  sinon.replace(model, 'readOne', () => {
+    return {
+      author: { name: '김구름' },
+      title: '나는 클라우드 전문가',
+      body: '구름은 나의 것'
+    }
+  })
 })
 
 afterEach(() => {
